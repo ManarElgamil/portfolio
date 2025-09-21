@@ -79,10 +79,10 @@ Whether you're a potential client, collaborator, or fellow developer, I'd love t
 ## Contact
 
 Let's connect and discuss opportunities:
-- **Email**: manar@example.com
-- **LinkedIn**: [Your LinkedIn Profile]
+- **Email**: gamilmanar15@gmail.com
+- **LinkedIn**: [https://www.linkedin.com/in/manar-elgamil-83099222a/]
 - **GitHub**: [@ManarElgamil](https://github.com/ManarElgamil)
-- **Location**: Bedford, Nova Scotia, Canada
+- **Location**: Halifax, NS, Canada
 
 ---
 
