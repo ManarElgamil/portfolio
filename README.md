@@ -1,135 +1,89 @@
-# Portfolio Website
+# Manar Elgamil - Portfolio
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS to showcase skills, projects, and professional experience.
+Welcome to my digital portfolio! I'm a Cloud and Application Specialist passionate about designing secure, automated, and business-aligned solutions that drive real-world impact.
 
-## Features
+## About Me
+
+I'm currently working as a Cloud and Application Specialist at VMG Strategic Technology, where I design and deliver production-ready systems for clients. Despite being a fresh graduate, I've been entrusted with leading multiple end-to-end projects from architecture design to deployment, building systems that are now in use by clients and internal teams.
+
+My journey in technology spans from developing machine learning chatbots during my internship at MOBIA, to automating financial processes at AXIS Capital, and now leading cloud architecture projects at VMG. I believe in continuous learning and staying at the forefront of technology to deliver exceptional solutions.
+
+## My Expertise
+
+### 🏗️ **Cloud Architecture & DevOps**
+- **AWS Services**: Lambda, S3, Step Functions, API Gateway, SNS, Rekognition, VPC, EC2, DynamoDB
+- **Containerization**: Docker, multi-container applications
+- **CI/CD**: GitHub Actions, GitOps practices
+- **Infrastructure**: Serverless architectures, microservices, VPC security
+
+### 💻 **Backend Development**
+- **Languages**: Python (expert), Node.js, SQL, PL/SQL
+- **Frameworks**: Flask, Express.js, boto3
+- **APIs**: REST APIs, Microsoft Graph API
+- **Databases**: DynamoDB, Oracle EBS, Amazon Aurora, MongoDB
+
+### 🔒 **Security & Best Practices**
+- **Security**: IAM permissions, principle of least privilege, VPC security
+- **Architecture**: Secure communication, input validation, data protection
+- **Compliance**: Security analysis, vulnerability assessment
+
+### 📊 **Data & Analytics**
+- **Machine Learning**: Natural Language Processing, chatbot development
+- **Data Analysis**: Cost analysis, performance optimization
+- **Visualization**: Streamlit dashboards, analytics platforms
+
+## Featured Projects
+
+### 🌟 **Image Processing Application**
+Serverless image processing application using AWS Rekognition with microservice architecture. Increased team efficiency by 20% through automated image analysis and user notifications.
+
+### 🌟 **Secure Web Application**
+AWS-deployed web application with VPC security and high availability. Implemented comprehensive security measures with private/public subnets and ACLs.
+
+### 🌟 **Pivotal Growth Inc. - Leadership Diagnostics Platform**
+Led the design and deployment of a serverless AWS architecture, delivering under a tight 2-month deadline and featured in the company's official press release.
+
+## Professional Experience
+
+- **Cloud and Application Specialist** at VMG Strategic Technology (Feb 2025 - Present)
+- **Teaching Assistant** at Dalhousie University (Sep 2022 - Jun 2024)
+- **Business Technology Co-op** at AXIS Capital (May 2023 - Sep 2023)
+- **Data Scientist Intern** at MOBIA (May 2022 - Aug 2022)
+
+## Technical Skills Summary
+
+| Category | Technologies |
+|----------|-------------|
+| **Cloud & DevOps** | AWS (Lambda, S3, Step Functions, API Gateway, SNS, Rekognition, VPC, EC2), Docker, GitHub Actions, Azure, GitOps |
+| **Backend & APIs** | Python, Flask, boto3, Node.js, Express.js, Microsoft Graph API, REST APIs |
+| **Database** | DynamoDB, Oracle EBS, Amazon Aurora, SQL, PL/SQL, MongoDB |
+| **Frontend** | React, Streamlit, JavaScript, HTML/CSS, Tailwind CSS |
+| **Data & ML** | Machine Learning, Natural Language Processing, Data Analysis |
+
+## Portfolio Features
 
 - 🚀 **Modern Tech Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
 - 📱 **Responsive Design**: Mobile-first approach ensuring great experience on all devices
-- 🎨 **Cool Visuals**: Smooth animations, gradients, and modern UI components
+- 🎨 **Terminal Aesthetic**: Dark mode with coding-inspired design and animations
 - 🔧 **Modular Architecture**: Easy to add new projects, achievements, and content
-- 📬 **Contact Form**: Interactive contact form for client inquiries and service bookings
+- 📬 **Contact Form**: Interactive contact form for client inquiries
 - 🔗 **GitHub Integration**: Direct links to live projects and repositories
 - ⚡ **Performance Optimized**: Fast loading times and optimized for SEO
-- 🎯 **Interactive Elements**: Smooth scrolling, hover effects, and engaging animations
 
-## Sections
+## Personal Note
 
-- **Hero**: Eye-catching introduction with call-to-action buttons
-- **About**: Personal introduction and quick stats
-- **Skills**: Categorized skills with proficiency levels and visual indicators
-- **Projects**: Featured and categorized project showcase with GitHub links
-- **Experience**: Professional timeline with achievements and technologies
-- **Achievements**: Awards, certifications, and recognitions
-- **Contact**: Contact form, service offerings, and booking capabilities
+This portfolio represents not just my technical skills, but my passion for creating solutions that make a real difference. Every project I work on is an opportunity to learn, grow, and contribute to the technology community. I believe in the power of well-architected systems to transform businesses and improve lives.
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/ManarElgamil/portfolio.git
-cd portfolio
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Start the development server
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Customization
-
-### Adding New Content
-
-The portfolio is designed to be easily customizable. All content is stored in data files:
-
-- **Personal Info**: Edit `src/data/portfolio.ts` to update personal information
-- **Skills**: Add new skills to the `skills` array
-- **Projects**: Add new projects to the `projects` array
-- **Experience**: Update the `experience` array with new roles
-- **Achievements**: Add certifications and awards to the `achievements` array
-
-### Styling
-
-- **Colors**: Modify the color palette in `tailwind.config.js`
-- **Components**: Update component styles in individual component files
-- **Global Styles**: Edit `src/styles/globals.css` for global styling changes
-
-## Project Structure
-
-```
-portfolio/
-├── src/
-│   ├── app/                 # Next.js app directory
-│   ├── components/          # React components
-│   ├── data/               # Data files for easy content management
-│   ├── types/              # TypeScript type definitions
-│   └── styles/             # Global styles
-├── public/                 # Static assets
-└── package.json
-```
-
-## Technologies Used
-
-- **Frontend**: Next.js 15, React 19, TypeScript
-- **Styling**: Tailwind CSS
-- **Deployment**: Vercel (recommended)
-- **Development**: ESLint, PostCSS
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy with zero configuration
-
-### Other Platforms
-
-The project can be deployed to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
-
-## Performance
-
-- ✅ Optimized images and assets
-- ✅ Code splitting and lazy loading
-- ✅ SEO optimized
-- ✅ Lighthouse score: 95+
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Whether you're a potential client, collaborator, or fellow developer, I'd love to connect and discuss how we can work together to build something amazing.
 
 ## Contact
 
-For questions or collaboration opportunities:
-- Email: manar@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [@ManarElgamil](https://github.com/ManarElgamil)
+Let's connect and discuss opportunities:
+- **Email**: manar@example.com
+- **LinkedIn**: [Your LinkedIn Profile]
+- **GitHub**: [@ManarElgamil](https://github.com/ManarElgamil)
+- **Location**: Bedford, Nova Scotia, Canada
 
 ---
 
-Built with ❤️ by Manar Elgamil
+*Built with ❤️ and a lot of coffee by Manar Elgamil*
