@@ -30,15 +30,15 @@ const Achievements = () => {
   }
 
   return (
-    <section id="achievements" className="section-padding bg-white">
+    <section id="achievements" className="section-padding bg-white dark:bg-terminal-800">
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
             Achievements & Certifications
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             Recognition and certifications that validate my expertise and dedication
           </p>
         </div>
@@ -48,7 +48,7 @@ const Achievements = () => {
           {achievements.map((achievement, index) => (
             <div
               key={achievement.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in border"
+              className="bg-white dark:bg-terminal-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in border border-gray-200 dark:border-terminal-600"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Achievement Header */}
@@ -71,19 +71,19 @@ const Achievements = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-terminal-100 mb-2 font-mono">
                   {achievement.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
                   {achievement.description}
                 </p>
 
                 {/* Issuer and Date */}
                 <div className="space-y-2 mb-4">
                   {achievement.issuer && (
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 dark:text-terminal-400 font-mono">
                       <span className="font-medium">Issued by:</span> {achievement.issuer}
                     </p>
                   )}
@@ -111,64 +111,64 @@ const Achievements = () => {
           ))}
 
           {/* Add Achievement Placeholder */}
-          <div className="bg-gray-50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center p-8 text-center hover:border-primary-300 transition-colors duration-200">
+          <div className="bg-gray-50 dark:bg-terminal-700 rounded-xl border-2 border-dashed border-gray-300 dark:border-terminal-600 flex items-center justify-center p-8 text-center hover:border-primary-300 dark:hover:border-primary-500 transition-colors duration-200">
             <div>
               <div className="text-4xl mb-4">🎯</div>
-              <p className="text-gray-500 mb-2">More achievements coming soon!</p>
-              <p className="text-sm text-gray-400">Stay tuned for updates</p>
+              <p className="text-gray-500 dark:text-terminal-400 mb-2 font-mono">More achievements coming soon!</p>
+              <p className="text-sm text-gray-400 dark:text-terminal-500 font-mono">Stay tuned for updates</p>
             </div>
           </div>
         </div>
 
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-gradient-to-br from-primary-50 to-white rounded-xl border border-primary-100">
+          <div className="text-center p-6 bg-gradient-to-br from-primary-50 to-white dark:from-primary-900/20 dark:to-terminal-700 rounded-xl border border-primary-100 dark:border-primary-800">
             <div className="text-3xl font-bold text-primary-600 mb-2">
               {achievements.filter(a => a.type === 'certification').length}
             </div>
-            <div className="text-gray-600">Certifications</div>
+            <div className="text-gray-600 dark:text-terminal-300 font-mono">Certifications</div>
           </div>
           
-          <div className="text-center p-6 bg-gradient-to-br from-yellow-50 to-white rounded-xl border border-yellow-100">
+          <div className="text-center p-6 bg-gradient-to-br from-yellow-50 to-white dark:from-yellow-900/20 dark:to-terminal-700 rounded-xl border border-yellow-100 dark:border-yellow-800">
             <div className="text-3xl font-bold text-yellow-600 mb-2">
               {achievements.filter(a => a.type === 'award').length}
             </div>
-            <div className="text-gray-600">Awards</div>
+            <div className="text-gray-600 dark:text-terminal-300 font-mono">Awards</div>
           </div>
           
-          <div className="text-center p-6 bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100">
+          <div className="text-center p-6 bg-gradient-to-br from-green-50 to-white dark:from-green-900/20 dark:to-terminal-700 rounded-xl border border-green-100 dark:border-green-800">
             <div className="text-3xl font-bold text-green-600 mb-2">
               {achievements.filter(a => a.type === 'recognition').length}
             </div>
-            <div className="text-gray-600">Recognitions</div>
+            <div className="text-gray-600 dark:text-terminal-300 font-mono">Recognitions</div>
           </div>
           
-          <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-white rounded-xl border border-purple-100">
+          <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-white dark:from-purple-900/20 dark:to-terminal-700 rounded-xl border border-purple-100 dark:border-purple-800">
             <div className="text-3xl font-bold text-purple-600 mb-2">
               {achievements.length}
             </div>
-            <div className="text-gray-600">Total Achievements</div>
+            <div className="text-gray-600 dark:text-terminal-300 font-mono">Total Achievements</div>
           </div>
         </div>
 
         {/* Professional Development Note */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 max-w-3xl mx-auto border border-primary-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-accent-900/20 rounded-2xl p-8 max-w-3xl mx-auto border border-primary-100 dark:border-primary-800">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
               Continuous Learning
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-terminal-300 mb-6 font-mono">
               I believe in continuous learning and staying updated with the latest technologies. 
               These achievements represent my commitment to professional growth and excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <span className="px-4 py-2 bg-white text-gray-700 rounded-full text-sm shadow">
+              <span className="px-4 py-2 bg-white dark:bg-terminal-600 text-gray-700 dark:text-terminal-200 rounded-full text-sm shadow font-mono">
                 📚 Always Learning
               </span>
-              <span className="px-4 py-2 bg-white text-gray-700 rounded-full text-sm shadow">
+              <span className="px-4 py-2 bg-white dark:bg-terminal-600 text-gray-700 dark:text-terminal-200 rounded-full text-sm shadow font-mono">
                 🚀 Innovation Focused
               </span>
-              <span className="px-4 py-2 bg-white text-gray-700 rounded-full text-sm shadow">
+              <span className="px-4 py-2 bg-white dark:bg-terminal-600 text-gray-700 dark:text-terminal-200 rounded-full text-sm shadow font-mono">
                 🎯 Results Driven
               </span>
             </div>

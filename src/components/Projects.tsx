@@ -23,15 +23,15 @@ const Projects = () => {
   const featuredProjects = projects.filter(project => project.featured)
 
   return (
-    <section id="projects" className="section-padding bg-white">
+    <section id="projects" className="section-padding bg-white dark:bg-terminal-800">
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
             Featured Projects
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             A showcase of my recent work and contributions to various projects
           </p>
         </div>
@@ -39,29 +39,29 @@ const Projects = () => {
         {/* Featured Projects */}
         {featuredProjects.length > 0 && (
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-accent-400 mb-8 text-center font-mono">
               🌟 Featured Work
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               {featuredProjects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-primary-100"
+                  className="bg-gradient-to-br from-primary-50 to-white dark:from-primary-900/20 dark:to-terminal-700 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-primary-100 dark:border-primary-800"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-primary-600 text-white text-sm rounded-full">
                       Featured
                     </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full capitalize">
+                    <span className="px-3 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-600 dark:text-terminal-300 text-sm rounded-full capitalize font-mono">
                       {project.category}
                     </span>
                   </div>
                   
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-terminal-100 mb-3 font-mono">
                     {project.title}
                   </h4>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
                     {project.description}
                   </p>
                   
@@ -69,13 +69,13 @@ const Projects = () => {
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-white text-gray-700 text-sm rounded-full border"
+                        className="px-3 py-1 bg-white dark:bg-terminal-600 text-gray-700 dark:text-terminal-300 text-sm rounded-full border border-gray-200 dark:border-terminal-500 font-mono"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 4 && (
-                      <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-600 dark:text-terminal-300 text-sm rounded-full font-mono">
                         +{project.technologies.length - 4} more
                       </span>
                     )}
@@ -121,10 +121,10 @@ const Projects = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 font-mono ${
                 activeCategory === category.id
                   ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-600 hover:bg-primary-50 hover:text-primary-600'
+                  : 'bg-gray-100 dark:bg-terminal-700 text-gray-600 dark:text-terminal-300 hover:bg-primary-50 dark:hover:bg-primary-800 hover:text-primary-600 dark:hover:text-primary-400'
               }`}
             >
               {category.name}
@@ -137,7 +137,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in"
+              className="bg-white dark:bg-terminal-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in border border-gray-200 dark:border-terminal-600"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Project Image Placeholder */}
@@ -149,21 +149,21 @@ const Projects = () => {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full capitalize">
+                  <span className="px-3 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-600 dark:text-terminal-300 text-sm rounded-full capitalize font-mono">
                     {project.category}
                   </span>
                   {project.featured && (
-                    <span className="px-3 py-1 bg-primary-100 text-primary-600 text-sm rounded-full">
+                    <span className="px-3 py-1 bg-primary-100 dark:bg-primary-800 text-primary-600 dark:text-primary-300 text-sm rounded-full font-mono">
                       ⭐ Featured
                     </span>
                   )}
                 </div>
                 
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-terminal-100 mb-2 font-mono">
                   {project.title}
                 </h4>
                 
-                <p className="text-gray-600 mb-4 line-clamp-2">
+                <p className="text-gray-600 dark:text-terminal-300 mb-4 line-clamp-2 font-mono">
                   {project.description}
                 </p>
                 
@@ -171,7 +171,7 @@ const Projects = () => {
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                      className="px-2 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-600 dark:text-terminal-300 text-xs rounded font-mono"
                     >
                       {tech}
                     </span>
@@ -212,7 +212,7 @@ const Projects = () => {
 
         {/* GitHub CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-gray-600 dark:text-terminal-300 mb-6 font-mono">
             Want to see more of my work?
           </p>
           <a

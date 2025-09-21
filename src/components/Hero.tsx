@@ -21,30 +21,79 @@ const Hero = () => {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100 pt-20">
-      <div className="container-max section-padding text-center">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-terminal-900 dark:via-terminal-800 dark:to-terminal-900 pt-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 opacity-10">
+        <img 
+          src="/images/hijabi-girl-coding.jpg" 
+          alt="Coding inspiration" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="container-max section-padding text-center relative z-10">
         <div
           className={`transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          {/* Profile Image */}
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl font-bold shadow-xl">
-              {personalInfo.name.split(' ').map(n => n[0]).join('')}
+          {/* Centerpiece Visual Element - Terminal Window */}
+          <div className="mb-8 relative">
+            <div className="relative group">
+              {/* Terminal Window */}
+              <div className="w-96 h-64 mx-auto bg-terminal-800 rounded-lg shadow-2xl border border-terminal-600 overflow-hidden">
+                {/* Terminal Header */}
+                <div className="bg-terminal-700 px-4 py-2 flex items-center space-x-2 border-b border-terminal-600">
+                  <div className="flex space-x-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="text-terminal-300 text-sm font-mono ml-4">terminal</div>
+                </div>
+                
+                {/* Terminal Content */}
+                <div className="p-4 h-full bg-terminal-800">
+                  <div className="space-y-2 text-left">
+                    <div className="text-primary-400 font-mono text-sm">
+                      <span className="text-accent-400">$</span> whoami
+                    </div>
+                    <div className="text-primary-300 font-mono text-sm animate-terminal-blink">
+                      {personalInfo.name}
+                    </div>
+                    <div className="text-primary-400 font-mono text-sm">
+                      <span className="text-accent-400">$</span> cat about.txt
+                    </div>
+                    <div className="text-primary-300 font-mono text-sm">
+                      Full Stack Developer
+                    </div>
+                    <div className="text-primary-300 font-mono text-sm">
+                      Building exceptional digital experiences
+                    </div>
+                    <div className="text-primary-400 font-mono text-sm">
+                      <span className="text-accent-400">$</span> <span className="animate-code-typing">npm run build</span>
+                    </div>
+                    <div className="text-green-400 font-mono text-sm">
+                      ✓ Build completed successfully
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Glow effect */}
+              <div className="absolute inset-0 w-96 h-64 mx-auto rounded-lg bg-gradient-to-r from-primary-500/20 to-accent-500/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
             </div>
           </div>
 
           {/* Name and Title */}
-          <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-6xl font-bold text-primary-600 dark:text-primary-400 mb-4 font-mono">
             {personalInfo.name}
           </h1>
           
-          <h2 className="text-xl sm:text-2xl text-primary-600 font-semibold mb-6">
+          <h2 className="text-xl sm:text-2xl text-accent-600 dark:text-accent-400 font-semibold mb-6 font-mono">
             {personalInfo.title}
           </h2>
           
-          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-terminal-300 mb-8 max-w-2xl mx-auto leading-relaxed font-mono">
             {personalInfo.subtitle}
           </p>
 
@@ -52,15 +101,15 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button
               onClick={scrollToContact}
-              className="btn-primary text-lg px-8 py-3 transform hover:scale-105 transition-transform duration-200"
+              className="bg-primary-600 hover:bg-primary-700 text-white font-mono text-lg px-8 py-3 rounded-lg transition-colors duration-200 border border-primary-500"
             >
-              Get In Touch
+              $ contact
             </button>
             <button
               onClick={scrollToProjects}
-              className="btn-secondary text-lg px-8 py-3 transform hover:scale-105 transition-transform duration-200"
+              className="bg-gray-200 hover:bg-gray-300 dark:bg-terminal-700 dark:hover:bg-terminal-600 text-primary-600 dark:text-primary-400 font-mono text-lg px-8 py-3 rounded-lg transition-colors duration-200 border border-gray-300 dark:border-terminal-600"
             >
-              View My Work
+              $ projects
             </button>
           </div>
 
@@ -70,7 +119,7 @@ const Hero = () => {
               href={personalInfo.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary-600 transition-colors duration-200 transform hover:scale-110"
+              className="text-gray-600 dark:text-terminal-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
               aria-label="GitHub"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -81,7 +130,7 @@ const Hero = () => {
               href={personalInfo.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary-600 transition-colors duration-200 transform hover:scale-110"
+              className="text-gray-600 dark:text-terminal-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -93,7 +142,7 @@ const Hero = () => {
                 href={personalInfo.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-200 transform hover:scale-110"
+                className="text-gray-600 dark:text-terminal-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                 aria-label="Twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -108,7 +157,7 @@ const Hero = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
           <button
             onClick={() => scrollToProjects()}
-            className="text-gray-400 hover:text-primary-600 transition-colors duration-200"
+            className="text-gray-600 dark:text-terminal-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
             aria-label="Scroll down"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
