@@ -23,17 +23,15 @@ const About = () => {
               </p>
               
               <p className="text-lg text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
-                I specialize in designing and implementing cloud-native solutions using AWS, 
-                building serverless architectures, and creating secure, automated systems that 
-                drive business value. My expertise spans from containerizing applications with 
-                Docker to developing REST APIs and integrating complex enterprise systems.
+                I love building cloud solutions with AWS, creating serverless apps, and 
+                making systems that just work. From Docker containers to REST APIs, 
+                I enjoy turning complex problems into simple, elegant solutions.
               </p>
               
               <p className="text-lg text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
-                When I&apos;m not coding, you&apos;ll find me taking carefree walks in nature, 
-                exploring new hiking trails, or simply enjoying the peaceful moments by the 
-                ocean. These quiet moments in nature help me recharge and bring fresh 
-                perspectives to my technical work.
+                When I&apos;m not coding, you&apos;ll find me wandering through nature trails, 
+                breathing in the fresh air, or watching the waves by the ocean. 
+                These peaceful moments keep me grounded and inspired.
               </p>
 
               {/* Quick Stats */}
