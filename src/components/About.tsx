@@ -37,11 +37,11 @@ const About = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="text-center p-4 bg-gray-100 dark:bg-terminal-700 rounded-lg border border-gray-200 dark:border-terminal-600">
-                  <div className="text-2xl font-bold text-primary-600 mb-1">5+</div>
+                  <div className="text-2xl font-bold text-primary-600 mb-1">1+</div>
                   <div className="text-sm text-gray-600 dark:text-terminal-300 font-mono">Years Experience</div>
                 </div>
                 <div className="text-center p-4 bg-gray-100 dark:bg-terminal-700 rounded-lg border border-gray-200 dark:border-terminal-600">
-                  <div className="text-2xl font-bold text-primary-600 mb-1">50+</div>
+                  <div className="text-2xl font-bold text-primary-600 mb-1">10+</div>
                   <div className="text-sm text-gray-600 dark:text-terminal-300 font-mono">Projects Completed</div>
                 </div>
               </div>
@@ -71,7 +71,7 @@ const About = () => {
               Technologies I Love Working With
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'MongoDB', 'PostgreSQL', 'AWS', 'Docker', 'Git'].map((tech) => (
+              {['AWS', 'Python', 'Docker', 'AWS Lambda', 'DynamoDB', 'React', 'Flask', 'boto3', 'GitHub Actions', 'Streamlit', 'Microsoft Graph API', 'Oracle EBS'].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 bg-gray-100 dark:bg-terminal-700 text-primary-600 dark:text-primary-400 rounded-full text-sm font-mono font-medium hover:bg-primary-100 dark:hover:bg-primary-800 hover:text-primary-700 dark:hover:text-primary-300 transition-all duration-300 transform hover:scale-105 border border-gray-200 dark:border-terminal-600"

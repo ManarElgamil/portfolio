@@ -64,7 +64,7 @@ const Hero = () => {
                       <span className="text-accent-400">$</span> cat about.txt
                     </div>
                     <div className="text-primary-300 font-mono text-sm">
-                      Full Stack Developer
+                      Cloud and Application Specialist
                     </div>
                     <div className="text-primary-300 font-mono text-sm">
                       Building exceptional digital experiences

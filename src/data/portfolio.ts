@@ -8,7 +8,7 @@ export const personalInfo = {
   email: "gamilmanar15@gmail.com", // Update with actual email
   phone: "+1 (902) 412-6836", // Update with actual phone
   location: "Bedford, NS, Canada", // Update with actual location
-  resumeUrl: "/resume.pdf", // Add actual resume PDF
+  resumeUrl: "/manar_resume_updated.pdf", // Resume PDF
   social: {
     github: "https://github.com/ManarElgamil",
     linkedin: "https://www.linkedin.com/in/manar-elgamil-83099222a/", // Update
