@@ -6,7 +6,7 @@ import { personalInfo } from '@/data/portfolio'
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,16 +17,21 @@ const Header = () => {
   }, [])
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    // Set dark mode as default and apply it to the document
+    document.documentElement.classList.add('dark')
+  }, [])
+
+  useEffect(() => {
+    // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true)
-      document.documentElement.classList.add('dark')
-    } else {
+    if (savedTheme === 'light') {
       setIsDarkMode(false)
       document.documentElement.classList.remove('dark')
+    } else {
+      // Default to dark mode
+      setIsDarkMode(true)
+      document.documentElement.classList.add('dark')
     }
   }, [])
 
@@ -45,7 +50,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
+    // { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Achievements', href: '#achievements' },
@@ -81,7 +86,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden custom:flex space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -94,7 +99,7 @@ const Header = () => {
           </div>
 
           {/* Resume Button and Dark Mode Toggle */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden custom:flex items-center space-x-4">
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
@@ -138,7 +143,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button and Dark Mode Toggle */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="custom:hidden flex items-center space-x-2">
             {/* Dark Mode Toggle for Mobile */}
             <button
               onClick={toggleDarkMode}
@@ -194,7 +199,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-            <div className="md:hidden bg-white dark:bg-terminal-800 border-t border-gray-200 dark:border-terminal-700">
+            <div className="custom:hidden bg-white dark:bg-terminal-800 border-t border-gray-200 dark:border-terminal-700">
             <div className="py-4 px-4 space-y-4">
               {navItems.map((item) => (
                 <button

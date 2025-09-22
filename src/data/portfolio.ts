@@ -5,13 +5,13 @@ export const personalInfo = {
   title: "Cloud and Application Specialist",
   subtitle: "Designing secure, automated, and business-aligned solutions",
   bio: "Passionate Cloud and Application Specialist with expertise in AWS, serverless architectures, and full-stack development. I design and deliver production-ready systems that drive business value and operational efficiency.",
-  email: "manar@example.com", // Update with actual email
-  phone: "+1 (555) 123-4567", // Update with actual phone
-  location: "Bedford, Nova Scotia, Canada", // Update with actual location
+  email: "gamilmanar15@gmail.com", // Update with actual email
+  phone: "+1 (902) 412-6836", // Update with actual phone
+  location: "Bedford, NS, Canada", // Update with actual location
   resumeUrl: "/resume.pdf", // Add actual resume PDF
   social: {
     github: "https://github.com/ManarElgamil",
-    linkedin: "https://linkedin.com/in/your-profile", // Update
+    linkedin: "https://www.linkedin.com/in/manar-elgamil-83099222a/", // Update
     twitter: "https://twitter.com/your-handle", // Update
     website: "https://your-website.com" // Update
   }

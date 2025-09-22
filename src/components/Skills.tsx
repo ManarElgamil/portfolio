@@ -26,7 +26,7 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="section-padding bg-gray-50 dark:bg-terminal-800">
+    <section id="skills" className="section-padding bg-gray-50 dark:bg-terminal-900">
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">

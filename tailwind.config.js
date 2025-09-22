@@ -8,6 +8,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        'custom': '850px',
+      },
       colors: {
         primary: {
           50: '#fffbeb',

@@ -4,7 +4,7 @@ import { personalInfo } from '@/data/portfolio'
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-white dark:bg-terminal-800">
+    <section id="about" className="section-padding bg-white dark:bg-terminal-700">
       <div className="container-max">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}

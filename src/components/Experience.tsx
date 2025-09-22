@@ -4,7 +4,7 @@ import { experience } from '@/data/portfolio'
 
 const Experience = () => {
   return (
-    <section id="experience" className="section-padding bg-gray-50 dark:bg-terminal-800">
+    <section id="experience" className="section-padding bg-gray-50 dark:bg-terminal-700">
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">

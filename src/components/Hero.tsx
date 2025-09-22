@@ -98,7 +98,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col custom:flex-row gap-4 justify-center items-center mb-12">
             <button
               onClick={scrollToContact}
               className="bg-primary-600 hover:bg-primary-700 text-white font-mono text-lg px-8 py-3 rounded-lg transition-colors duration-200 border border-primary-500"
@@ -154,7 +154,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
           <button
             onClick={() => scrollToProjects()}
             className="text-gray-600 dark:text-terminal-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"

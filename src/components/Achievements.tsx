@@ -30,7 +30,7 @@ const Achievements = () => {
   }
 
   return (
-    <section id="achievements" className="section-padding bg-white dark:bg-terminal-800">
+    <section id="achievements" className="section-padding bg-white dark:bg-terminal-700">
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
