@@ -23,15 +23,17 @@ const About = () => {
               </p>
               
               <p className="text-lg text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
-                I specialize in creating scalable web applications using modern technologies 
-                like React, Next.js, and Node.js. My passion lies in writing clean, 
-                maintainable code and delivering exceptional user experiences.
+                I specialize in designing and implementing cloud-native solutions using AWS, 
+                building serverless architectures, and creating secure, automated systems that 
+                drive business value. My expertise spans from containerizing applications with 
+                Docker to developing REST APIs and integrating complex enterprise systems.
               </p>
               
               <p className="text-lg text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
-                When I&apos;m not coding, you&apos;ll find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge with the 
-                developer community.
+                When I&apos;m not coding, you&apos;ll find me taking carefree walks in nature, 
+                exploring new hiking trails, or simply enjoying the peaceful moments by the 
+                ocean. These quiet moments in nature help me recharge and bring fresh 
+                perspectives to my technical work.
               </p>
 
               {/* Quick Stats */}
