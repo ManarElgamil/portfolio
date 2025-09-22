@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
-import Skills from '@/components/Skills'
+// import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Experience from '@/components/Experience'
 import Achievements from '@/components/Achievements'
@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
       <Experience />
       <Achievements />

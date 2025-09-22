@@ -31,7 +31,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             A showcase of my recent work and contributions to various projects
           </p>
         </div>
@@ -61,9 +61,9 @@ const Projects = () => {
                     {project.title}
                   </h4>
                   
-                  <p className="text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
-                    {project.description}
-                  </p>
+                       <p className="text-base text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
+                         {project.description}
+                       </p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.slice(0, 4).map((tech) => (
@@ -163,9 +163,9 @@ const Projects = () => {
                   {project.title}
                 </h4>
                 
-                <p className="text-gray-600 dark:text-terminal-300 mb-4 line-clamp-2 font-mono">
-                  {project.description}
-                </p>
+                     <p className="text-base text-gray-600 dark:text-terminal-300 mb-4 line-clamp-2 font-mono">
+                       {project.description}
+                     </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.slice(0, 3).map((tech) => (
@@ -212,9 +212,9 @@ const Projects = () => {
 
         {/* GitHub CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-gray-600 dark:text-terminal-300 mb-6 font-mono">
-            Want to see more of my work?
-          </p>
+               <p className="text-base text-gray-600 dark:text-terminal-300 mb-6 font-mono">
+                 Want to see more of my work?
+               </p>
           <a
             href="https://github.com/ManarElgamil"
             target="_blank"

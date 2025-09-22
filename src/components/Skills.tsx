@@ -34,7 +34,7 @@ const Skills = () => {
             Skills & Technologies
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             Here are the technologies and tools I use to bring ideas to life
           </p>
         </div>
@@ -73,7 +73,7 @@ const Skills = () => {
               {/* Skill Level */}
               <div className="mb-3">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-gray-600 dark:text-terminal-300 font-mono">{getSkillLevel(skill.level)}</span>
+                  <span className="text-base text-gray-600 dark:text-terminal-300 font-mono">{getSkillLevel(skill.level)}</span>
                   <span className="text-sm font-medium text-primary-600">{skill.level}/5</span>
                 </div>
                 

@@ -93,7 +93,7 @@ const Hero = () => {
             {personalInfo.title}
           </h2>
           
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-terminal-300 mb-8 max-w-2xl mx-auto leading-relaxed font-mono">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-terminal-300 mb-8 max-w-2xl mx-auto leading-relaxed font-mono">
             {personalInfo.subtitle}
           </p>
 

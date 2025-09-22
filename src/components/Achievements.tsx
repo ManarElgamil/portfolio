@@ -38,7 +38,7 @@ const Achievements = () => {
             Achievements & Certifications
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             Recognition and certifications that validate my expertise and dedication
           </p>
         </div>
@@ -76,18 +76,18 @@ const Achievements = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
-                  {achievement.description}
-                </p>
+                     <p className="text-base text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
+                       {achievement.description}
+                     </p>
 
                 {/* Issuer and Date */}
                 <div className="space-y-2 mb-4">
                   {achievement.issuer && (
-                    <p className="text-sm text-gray-500 dark:text-terminal-400 font-mono">
+                    <p className="text-base text-gray-500 dark:text-terminal-400 font-mono">
                       <span className="font-medium">Issued by:</span> {achievement.issuer}
                     </p>
                   )}
-                  <p className="text-sm text-gray-500">
+                  <p className="text-base text-gray-500">
                     <span className="font-medium">Date:</span> {new Date(achievement.date).toLocaleDateString()}
                   </p>
                 </div>
@@ -115,7 +115,7 @@ const Achievements = () => {
             <div>
               <div className="text-4xl mb-4">🎯</div>
               <p className="text-gray-500 dark:text-terminal-400 mb-2 font-mono">More achievements coming soon!</p>
-              <p className="text-sm text-gray-400 dark:text-terminal-500 font-mono">Stay tuned for updates</p>
+              <p className="text-base text-gray-400 dark:text-terminal-500 font-mono">Stay tuned for updates</p>
             </div>
           </div>
         </div>
@@ -157,10 +157,10 @@ const Achievements = () => {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
               Continuous Learning
             </h3>
-            <p className="text-gray-600 dark:text-terminal-300 mb-6 font-mono">
-              I believe in continuous learning and staying updated with the latest technologies. 
-              These achievements represent my commitment to professional growth and excellence.
-            </p>
+                 <p className="text-base text-gray-600 dark:text-terminal-300 mb-6 font-mono">
+                   I believe in continuous learning and staying updated with the latest technologies. 
+                   These achievements represent my commitment to professional growth and excellence.
+                 </p>
             <div className="flex flex-wrap justify-center gap-4">
               <span className="px-4 py-2 bg-white dark:bg-terminal-600 text-gray-700 dark:text-terminal-200 rounded-full text-sm shadow font-mono">
                 📚 Always Learning

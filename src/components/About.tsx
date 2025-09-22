@@ -15,36 +15,25 @@ const About = () => {
             <div className="w-20 h-1 bg-primary-600 mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Text Content */}
-            <div className="space-y-6">
-              <p className="text-lg text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
+            <div className="space-y-6 flex flex-col justify-center min-h-[400px]">
+              {/* <p className="text-base text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
                 {personalInfo.bio}
-              </p>
+              </p> */}
               
-              <p className="text-lg text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
+              <p className="text-base text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
                 I love building cloud solutions with AWS, creating serverless apps, and 
                 making systems that just work. From Docker containers to REST APIs, 
                 I enjoy turning complex problems into simple, elegant solutions.
               </p>
               
-              <p className="text-lg text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
+              <p className="text-base text-gray-600 dark:text-terminal-300 leading-relaxed font-mono">
                 When I&apos;m not coding, you&apos;ll find me wandering through nature trails, 
                 breathing in the fresh air, or watching the waves by the ocean. 
                 These peaceful moments keep me grounded and inspired.
               </p>
 
-              {/* Quick Stats */}
-              <div className="grid grid-cols-2 gap-6 pt-6">
-                <div className="text-center p-4 bg-gray-100 dark:bg-terminal-700 rounded-lg border border-gray-200 dark:border-terminal-600">
-                  <div className="text-2xl font-bold text-primary-600 mb-1">1+</div>
-                  <div className="text-sm text-gray-600 dark:text-terminal-300 font-mono">Years Experience</div>
-                </div>
-                <div className="text-center p-4 bg-gray-100 dark:bg-terminal-700 rounded-lg border border-gray-200 dark:border-terminal-600">
-                  <div className="text-2xl font-bold text-primary-600 mb-1">10+</div>
-                  <div className="text-sm text-gray-600 dark:text-terminal-300 font-mono">Projects Completed</div>
-                </div>
-              </div>
             </div>
 
             {/* Image/Visual */}
@@ -62,6 +51,20 @@ const About = () => {
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-full h-full bg-primary-200 rounded-2xl -z-10"></div>
               <div className="absolute top-8 right-8 w-24 h-24 bg-primary-300 rounded-full opacity-50"></div>
+            </div>
+          </div>
+
+          {/* Quick Stats - Centered across full width */}
+          <div className="flex justify-center mt-12">
+            <div className="flex gap-6">
+              <div className="text-center p-4 bg-gray-100 dark:bg-terminal-700 rounded-lg border border-gray-200 dark:border-terminal-600">
+                <div className="text-2xl font-bold text-primary-600 mb-1">1+</div>
+                <div className="text-base text-gray-600 dark:text-terminal-300 font-mono">Years Experience</div>
+              </div>
+              <div className="text-center p-4 bg-gray-100 dark:bg-terminal-700 rounded-lg border border-gray-200 dark:border-terminal-600">
+                <div className="text-2xl font-bold text-primary-600 mb-1">10+</div>
+                <div className="text-base text-gray-600 dark:text-terminal-300 font-mono">Projects Completed</div>
+              </div>
             </div>
           </div>
 

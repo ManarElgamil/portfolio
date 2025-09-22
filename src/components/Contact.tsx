@@ -58,7 +58,7 @@ const Contact = () => {
             Let&apos;s Work Together
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Ready to bring your ideas to life? Let&apos;s discuss your project and how I can help you achieve your goals.
           </p>
         </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                     <span className="text-lg">{service.icon}</span>
                     <div>
                       <div className="font-medium text-gray-900 dark:text-gray-100">{service.title}</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-300">{service.desc}</div>
+                      <div className="text-base text-gray-600 dark:text-gray-300">{service.desc}</div>
                     </div>
                   </div>
                 ))}

@@ -12,7 +12,7 @@ const Experience = () => {
             Work Experience
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             My professional journey and the impact I&apos;ve made along the way
           </p>
         </div>
@@ -48,9 +48,9 @@ const Experience = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-600 dark:text-terminal-300 mb-6 leading-relaxed font-mono">
-                    {exp.description}
-                  </p>
+                       <p className="text-base text-gray-600 dark:text-terminal-300 mb-6 leading-relaxed font-mono">
+                         {exp.description}
+                       </p>
 
                   {/* Technologies */}
                   <div className="mb-6">
@@ -76,10 +76,10 @@ const Experience = () => {
                     </h4>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, achIndex) => (
-                        <li
-                          key={achIndex}
-                          className="flex items-start text-gray-600 dark:text-terminal-300 font-mono"
-                        >
+                             <li
+                               key={achIndex}
+                               className="flex items-start text-base text-gray-600 dark:text-terminal-300 font-mono"
+                             >
                           <span className="text-primary-600 mr-3 mt-1">✦</span>
                           {achievement}
                         </li>
@@ -98,9 +98,9 @@ const Experience = () => {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
               Let&apos;s Work Together
             </h3>
-            <p className="text-gray-600 dark:text-terminal-300 mb-6 font-mono">
-              I&apos;m always open to discussing new opportunities and exciting projects.
-            </p>
+                   <p className="text-base text-gray-600 dark:text-terminal-300 mb-6 font-mono">
+                     I&apos;m always open to discussing new opportunities and exciting projects.
+                   </p>
             <button
               onClick={() => {
                 const element = document.querySelector('#contact')
