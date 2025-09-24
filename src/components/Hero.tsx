@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { personalInfo } from '@/data/portfolio'
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false) 
 
   useEffect(() => {
     setIsVisible(true)
