@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { personalInfo } from '@/data/portfolio'
 
 const Header = () => {
@@ -75,11 +76,14 @@ const Header = () => {
         <div className="flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/images/logo.png" 
-              alt="Logo" 
-              className="w-8 h-8 object-contain"
-            />
+            <div className="relative w-8 h-8">
+              <Image 
+                src="/images/logo.png" 
+                alt="Logo" 
+                fill
+                className="object-contain"
+              />
+            </div>
             <div className="font-bold text-xl text-primary-600 dark:text-primary-400 font-mono">
               {personalInfo.name}
             </div>

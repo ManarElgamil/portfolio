@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { personalInfo } from '@/data/portfolio'
 
 const About = () => {
@@ -39,11 +40,12 @@ const About = () => {
             {/* Image/Visual */}
             <div className="relative">
               <div className="relative z-10">
-                <div className="w-full h-80 rounded-2xl shadow-xl overflow-hidden border-2 border-primary-500">
-                  <img 
+                <div className="w-full h-80 rounded-2xl shadow-xl overflow-hidden border-2 border-primary-500 relative">
+                  <Image 
                     src="/images/me-me.jpg" 
                     alt="Manar Elgamil" 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>

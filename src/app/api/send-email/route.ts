@@ -71,10 +71,26 @@ export async function POST(request: NextRequest) {
     // Send email using MailerSend
     const response = await mailerSend.email.send(emailParams)
 
-    console.log('Email sent successfully via MailerSend:', response)
+    console.log('=== MailerSend Response Debug ===')
+    console.log('Full response:', JSON.stringify(response, null, 2))
+    console.log('Response type:', typeof response)
+    console.log('Response keys:', Object.keys(response))
+    
+    // Type cast to any to inspect the actual response structure
+    const responseAny = response as any
+    console.log('Response.message_id:', responseAny.message_id)
+    console.log('Response.messageId:', responseAny.messageId)
+    console.log('Response.id:', responseAny.id)
+    console.log('Response.status:', responseAny.status)
+    console.log('Response.data:', responseAny.data)
+    console.log('Headers x-message-id:', responseAny.headers?.['x-message-id'])
+    console.log('=== End Debug ===')
+
+    // Extract message ID from headers (MailerSend puts it in x-message-id header)
+    const messageId = responseAny.headers?.['x-message-id'] || 'sent'
 
     return NextResponse.json(
-      { success: true, messageId: response.messageId },
+      { success: true, messageId },
       { status: 200 }
     )
   } catch (error) {
