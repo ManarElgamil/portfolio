@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { personalInfo } from '@/data/portfolio'
 
 const Hero = () => {
@@ -24,10 +25,12 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-terminal-900 dark:via-terminal-800 dark:to-terminal-900 pt-20 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-10">
-        <img 
+        <Image 
           src="/images/hijabi-girl-coding.jpg" 
           alt="Coding inspiration" 
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       </div>
       <div className="container-max section-padding text-center relative z-10">

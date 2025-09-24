@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       .setSubject(`New Contact Form Submission - ${subject}`)
       .setHtml(htmlContent)
       .setText(textContent)
-      .setReplyTo([new Recipient(email, name)]) // Allow replying directly to the sender
+      .setReplyTo(new Recipient(email, name)) // Allow replying directly to the sender
 
     // Send email using MailerSend
     const response = await mailerSend.email.send(emailParams)
