@@ -4,10 +4,23 @@ import { personalInfo } from '@/data/portfolio'
 export const metadata = {
   title: `${personalInfo.name} - ${personalInfo.title}`,
   description: personalInfo.bio,
+  icons: {
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
   openGraph: {
     title: `${personalInfo.name} - ${personalInfo.title}`,
     description: personalInfo.bio,
     type: 'website',
+    images: [
+      {
+        url: '/images/logo.png',
+        width: 32,
+        height: 32,
+        alt: `${personalInfo.name} Logo`,
+      },
+    ],
   },
 }
 
