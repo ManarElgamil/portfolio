@@ -225,13 +225,13 @@ const Contact = () => {
                   name="serviceType"
                   value={formData.serviceType || ''}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                 >
-                  <option value="">Select a service (optional)</option>
-                  <option value="consultation">Technical Consultation</option>
-                  <option value="development">Development Project</option>
-                  <option value="maintenance">Maintenance & Support</option>
-                  <option value="other">Other</option>
+                  <option value="" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">Select a service (optional)</option>
+                  <option value="consultation" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">Technical Consultation</option>
+                  <option value="development" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">Development Project</option>
+                  <option value="maintenance" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">Maintenance & Support</option>
+                  <option value="other" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">Other</option>
                 </select>
               </div>
 
@@ -246,7 +246,7 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                   placeholder="What's this about?"
                 />
               </div>

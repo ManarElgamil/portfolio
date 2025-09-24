@@ -1,20 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { MailerSend, EmailParams, Sender, Recipient } from 'mailersend'
 
 export async function POST(request: NextRequest) {
   try {
     const { name, email, subject, message, serviceType } = await request.json()
 
-    // Create SMTP transporter
-    const transporter = nodemailer.createTransporter({
-      host: 'smtp.mailersend.net',
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: process.env.SMTP_USERNAME,
-        pass: process.env.SMTP_PASSWORD,
-      },
+    // Initialize MailerSend client
+    const mailerSend = new MailerSend({
+      apiKey: process.env.MAILERSEND_API_KEY!,
     })
+
+    // Create sender and recipient objects
+    const sentFrom = new Sender(process.env.FROM_EMAIL!, 'Portfolio Contact Form')
+    const recipients = [
+      new Recipient(process.env.TO_EMAIL!, 'Manar Elgamil')
+    ]
 
     // Email content
     const htmlContent = `
@@ -59,27 +59,26 @@ export async function POST(request: NextRequest) {
       Timestamp: ${new Date().toLocaleString()}
     `
 
-    // Send email
-    const info = await transporter.sendMail({
-      from: {
-        name: 'Portfolio Contact Form',
-        address: process.env.SMTP_USERNAME || '',
-      },
-      to: process.env.SMTP_TO_EMAIL || 'gamilmanar15@gmail.com',
-      subject: `New Contact Form Submission - ${subject}`,
-      html: htmlContent,
-      text: textContent,
-      replyTo: email, // Allow replying directly to the sender
-    })
+    // Create EmailParams object
+    const emailParams = new EmailParams()
+      .setFrom(sentFrom)
+      .setTo(recipients)
+      .setSubject(`New Contact Form Submission - ${subject}`)
+      .setHtml(htmlContent)
+      .setText(textContent)
+      .setReplyTo([new Recipient(email, name)]) // Allow replying directly to the sender
 
-    console.log('Email sent successfully:', info.messageId)
+    // Send email using MailerSend
+    const response = await mailerSend.email.send(emailParams)
+
+    console.log('Email sent successfully via MailerSend:', response)
 
     return NextResponse.json(
-      { success: true, messageId: info.messageId },
+      { success: true, messageId: response.messageId },
       { status: 200 }
     )
   } catch (error) {
-    console.error('SMTP Error:', error)
+    console.error('MailerSend Error:', error)
     return NextResponse.json(
       { success: false, error: 'Failed to send email' },
       { status: 500 }
