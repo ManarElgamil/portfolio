@@ -20,21 +20,38 @@ const Contact = () => {
     setIsSubmitting(true)
     
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // In a real application, you would send the data to your backend
-      console.log('Form submitted:', formData)
-      
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        serviceType: undefined,
+      // Send email via API route
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          serviceType: formData.serviceType || 'General Inquiry',
+        }),
       })
-    } catch (error) {
+
+      const result = await response.json()
+
+      if (result.success) {
+        console.log('Email sent successfully:', result.messageId)
+        setSubmitStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+          serviceType: undefined,
+        })
+      } else {
+        throw new Error(result.error || 'Failed to send email')
+      }
+    } catch (error: any) {
+      console.error('Email error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -208,7 +225,7 @@ const Contact = () => {
                   name="serviceType"
                   value={formData.serviceType || ''}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                 >
                   <option value="">Select a service (optional)</option>
                   <option value="consultation">Technical Consultation</option>
@@ -229,7 +246,7 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                   placeholder="What's this about?"
                 />
               </div>
