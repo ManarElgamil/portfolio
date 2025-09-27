@@ -69,7 +69,7 @@ export const projects: Project[] = [
     title: "Image Processing Application",
     description: "Serverless image processing application using AWS Rekognition with microservice architecture",
     longDescription: "Implemented a serverless image processing application using AWS Rekognition to analyze images instantaneously. The system automatically notifies users upon completion using Amazon SNS, increasing team efficiency by 20%. Features comprehensive security analysis with IAM permissions and principle of least privilege.",
-    image: "/images/image-processing.png", //why is this not working?
+    image: "/images/img-proc.png", //why is this not working?
     technologies: ["AWS S3", "AWS Lambda", "AWS Step Functions", "Amazon API Gateway", "Amazon SNS", "Amazon Rekognition", "Python", "boto3", "JSON", "REST APIs"],
     githubUrl: "https://github.com/ManarElgamil/Image-Processing-Application",
     liveUrl: "https://www.youtube.com/watch?v=p056SV1m-cA",
