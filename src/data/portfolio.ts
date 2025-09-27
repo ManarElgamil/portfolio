@@ -12,8 +12,8 @@ export const personalInfo = {
   social: {
     github: "https://github.com/ManarElgamil",
     linkedin: "https://www.linkedin.com/in/manar-elgamil-83099222a/", // Update
-    twitter: "https://twitter.com/your-handle", // Update
-    website: "https://your-website.com" // Update
+    twitter: "https://x.com/ManarMo67071549", // Update
+    website: "https://manar-elgamil.dev" // Update
   }
 };
 
@@ -69,23 +69,23 @@ export const projects: Project[] = [
     title: "Image Processing Application",
     description: "Serverless image processing application using AWS Rekognition with microservice architecture",
     longDescription: "Implemented a serverless image processing application using AWS Rekognition to analyze images instantaneously. The system automatically notifies users upon completion using Amazon SNS, increasing team efficiency by 20%. Features comprehensive security analysis with IAM permissions and principle of least privilege.",
-    image: "/projects/image-processing.jpg",
+    image: "/images/image-processing.png", //why is this not working?
     technologies: ["AWS S3", "AWS Lambda", "AWS Step Functions", "Amazon API Gateway", "Amazon SNS", "Amazon Rekognition", "Python", "boto3", "JSON", "REST APIs"],
-    githubUrl: "https://github.com/ManarElgamil/image-processing-app",
-    liveUrl: "https://your-image-processing-app.com",
+    githubUrl: "https://github.com/ManarElgamil/Image-Processing-Application",
+    liveUrl: "https://www.youtube.com/watch?v=p056SV1m-cA",
     featured: true,
-    category: "web"
+    category: "backend"
   },
   {
     id: "secure-application",
     title: "Secure Web Application",
     description: "AWS-deployed web application with VPC security and high availability",
     longDescription: "Designed and deployed a secure web application on AWS utilizing EC2 instances and Elastic IP for public-facing services. Implemented AWS VPC with private and public subnets, ACLs for traffic segregation, and secure communication between EC2 and RDS database within the VPC.",
-    image: "/projects/secure-app.jpg",
+    image: "/projects/secure-app.png",
     technologies: ["Amazon VPC", "AWS EC2", "Amazon Aurora", "Subnets", "ACLs", "Python", "Flask"],
     githubUrl: "https://github.com/ManarElgamil/secure-application",
     liveUrl: "https://your-secure-app.com",
-    featured: true,
+    featured: false,
     category: "web"
   },
   {
@@ -93,22 +93,22 @@ export const projects: Project[] = [
     title: "Information Retrieval Application",
     description: "Multi-container Docker application with input validation and REST API communication",
     longDescription: "Implemented a multi-container application using Docker with 2 web apps packaged in separate containers. The first container validates and sanitizes user input before passing it to the second container, which retrieves information from mounted volumes. Prevents potential security risks and ensures only valid input is processed.",
-    image: "/projects/info-retrieval.jpg",
+    image: "/images/info-retrieval.png",
     technologies: ["Docker", "Python", "Flask", "REST APIs", "Postman", "Containerization"],
-    githubUrl: "https://github.com/ManarElgamil/information-retrieval-app",
-    liveUrl: "https://your-info-retrieval-app.com",
-    featured: false,
-    category: "web"
+    githubUrl: "https://github.com/ManarElgamil/Information-Retrieval-Application.git",
+    // liveUrl: "https://your-info-retrieval-app.com",
+    featured: true,
+    category: "backend"
   },
   {
     id: "portfolio-website",
     title: "Portfolio Website",
     description: "A modern, responsive portfolio website built with Next.js and TypeScript",
     longDescription: "This portfolio website showcases my skills, projects, and experience. Built with Next.js, TypeScript, and Tailwind CSS, it features a modular architecture for easy content updates, interactive animations, and a contact form for client inquiries.",
-    image: "/projects/portfolio.jpg",
+    image: "/images/portfolio.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     githubUrl: "https://github.com/ManarElgamil/portfolio",
-    liveUrl: "https://your-portfolio.vercel.app",
+    liveUrl: "https://manar-elgamil.dev",
     featured: false,
     category: "web"
   }
@@ -175,13 +175,39 @@ export const experience: Experience[] = [
 
 export const achievements: Achievement[] = [
   {
-    id: "cert-1",
-    title: "AWS Certified Developer",
-    description: "Amazon Web Services Certified Developer - Associate",
-    date: "2023-06",
-    type: "certification",
-    issuer: "Amazon Web Services",
-    credentialUrl: "https://aws.amazon.com/certification/"
+    id: "award-1",
+    title: "Leadership IMPACT Award",
+    description: "Displayed exceptional leadership skills and fostered new opportunities for computer science students at Dalhousie University.",
+    date: "Apr 2024",
+    type: "award",
+    issuer: "Faculty of Computer Science, Dalhousie University",
+    // location: "Halifax, NS"
   },
-  // Add more achievements
+  {
+    id: "award-2",
+    title: "First Place - Shiftkey's Generative AI Hackathon",
+    description: "Optimized the IWK's booking user-interface by utilizing generative AI to predict high and low traffic slots based on historical booking data.",
+    date: "Jan 2024",
+    type: "award",
+    issuer: "Shiftkey Labs",
+    // location: "Halifax, NS"
+  },
+  {
+    id: "award-3",
+    title: "First Place - Shiftkey's Generative AI Hackathon",
+    description: "Created an image-to-image generative AI tool that utilizes a CNN model to extract features from existing images and connects to OpenAI's public API to generate similar images. This resulted in creating cheaper test data for the salmonide and saithe fish species.",
+    date: "May 2024",
+    type: "award",
+    issuer: "Shiftkey Labs",
+    // location: "Halifax, NS"
+  },
+  {
+    id: "award-4",
+    title: "Citizenship Award",
+    description: "Advocated for diversity and inclusion and contributed voluntarily to creating a welcoming community for female-identifying and non-binary students at Dalhousie University.",
+    date: "Jan 2023",
+    type: "award",
+    issuer: "Faculty of Computer Science, Dalhousie University",
+    // location: "Halifax, NS"
+  }
 ];

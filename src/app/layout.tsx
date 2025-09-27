@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import { personalInfo } from '@/data/portfolio'
 
 export const metadata = {
+  metadataBase: new URL('https://manarelgamil.dev'),
   title: `${personalInfo.name} - ${personalInfo.title}`,
   description: personalInfo.bio,
   icons: {

@@ -34,11 +34,11 @@ const Achievements = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
             Achievements & Certifications
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             Recognition and certifications that validate my expertise and dedication
           </p>
         </div>
@@ -48,47 +48,42 @@ const Achievements = () => {
           {achievements.map((achievement, index) => (
             <div
               key={achievement.id}
-              className="bg-white dark:bg-terminal-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in border border-gray-200 dark:border-terminal-600"
+              className="bg-white dark:bg-terminal-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in border-l-4 border-l-primary-500 border border-gray-200 dark:border-terminal-600 h-full flex flex-col"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Achievement Header */}
-              <div className={`h-24 bg-gradient-to-r ${getAchievementColor(achievement.type)} flex items-center justify-center`}>
-                <span className="text-4xl">{getAchievementIcon(achievement.type)}</span>
-              </div>
-
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 {/* Achievement Type Badge */}
                 <div className="mb-4">
                   <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full capitalize ${
                     achievement.type === 'award' 
-                      ? 'bg-yellow-100 text-yellow-800'
+                      ? 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200'
                       : achievement.type === 'certification'
-                      ? 'bg-blue-100 text-blue-800'
-                      : 'bg-green-100 text-green-800'
+                      ? 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200'
+                      : 'bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200'
                   }`}>
                     {achievement.type}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 dark:text-terminal-100 mb-2 font-mono">
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-primary-600 dark:text-primary-400 mb-2 font-mono">
                   {achievement.title}
                 </h3>
 
                 {/* Description */}
-                     <p className="text-base text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
+                     <p className="text-xs sm:text-xs lg:text-sm text-gray-600 dark:text-terminal-300 mb-4 font-mono leading-relaxed flex-1">
                        {achievement.description}
                      </p>
 
                 {/* Issuer and Date */}
-                <div className="space-y-2 mb-4">
+                <div className="space-y-2 mb-4 mt-auto">
                   {achievement.issuer && (
-                    <p className="text-base text-gray-500 dark:text-terminal-400 font-mono">
+                    <p className="text-xs sm:text-sm lg:text-base text-gray-500 dark:text-terminal-400 font-mono">
                       <span className="font-medium">Issued by:</span> {achievement.issuer}
                     </p>
                   )}
-                  <p className="text-base text-gray-500">
-                    <span className="font-medium">Date:</span> {new Date(achievement.date).toLocaleDateString()}
+                  <p className="text-xs sm:text-sm lg:text-base text-gray-500">
+                    <span className="font-medium">Date:</span> {achievement.date}
                   </p>
                 </div>
 
@@ -111,11 +106,10 @@ const Achievements = () => {
           ))}
 
           {/* Add Achievement Placeholder */}
-          <div className="bg-gray-50 dark:bg-terminal-700 rounded-xl border-2 border-dashed border-gray-300 dark:border-terminal-600 flex items-center justify-center p-8 text-center hover:border-primary-300 dark:hover:border-primary-500 transition-colors duration-200">
+          <div className="bg-gradient-to-br from-primary-50 to-white dark:from-primary-900/20 dark:to-terminal-700 rounded-xl border-2 border-dashed border-primary-300 dark:border-primary-500 flex items-center justify-center p-8 text-center hover:border-primary-400 dark:hover:border-primary-400 transition-colors duration-200">
             <div>
-              <div className="text-4xl mb-4">🎯</div>
-              <p className="text-gray-500 dark:text-terminal-400 mb-2 font-mono">More achievements coming soon!</p>
-              <p className="text-base text-gray-400 dark:text-terminal-500 font-mono">Stay tuned for updates</p>
+              <p className="text-primary-600 dark:text-primary-400 mb-2 font-mono">More achievements coming soon!</p>
+              <p className="text-base text-primary-500 dark:text-primary-500 font-mono">Stay tuned for updates</p>
             </div>
           </div>
         </div>

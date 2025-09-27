@@ -30,8 +30,8 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">{personalInfo.name}</h3>
-              <p className="text-gray-300 mb-6 max-w-md">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">{personalInfo.name}</h3>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-300 mb-6 max-w-md">
                 {personalInfo.bio}
               </p>
               
@@ -79,13 +79,13 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <h4 className="text-sm sm:text-base lg:text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <button
                       onClick={() => scrollToSection(link.href)}
-                      className="text-gray-300 hover:text-white transition-colors duration-200"
+                      className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors duration-200"
                     >
                       {link.name}
                     </button>
@@ -96,8 +96,8 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-gray-300">
+              <h4 className="text-sm sm:text-base lg:text-lg font-semibold mb-4">Contact</h4>
+              <div className="space-y-2 text-xs sm:text-sm lg:text-base text-gray-300">
                 <p>
                   <a 
                     href={`mailto:${personalInfo.email}`}
@@ -123,14 +123,14 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 py-6 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-xs sm:text-xs lg:text-sm">
               © {currentYear} {personalInfo.name}. All rights reserved.
             </p>
             
             <div className="flex items-center space-x-6 mt-4 sm:mt-0">
               <button
                 onClick={() => scrollToSection('#contact')}
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+                className="text-gray-400 hover:text-white text-xs sm:text-xs lg:text-sm transition-colors duration-200"
               >
                 Get In Touch
               </button>

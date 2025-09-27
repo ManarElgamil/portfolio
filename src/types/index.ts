@@ -8,13 +8,13 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;
-  category: 'web' | 'mobile' | 'desktop' | 'ai' | 'other';
+  category: 'web' | 'backend' | 'ai' | 'other';
 }
 
 export interface Skill {
   name: string;
   level: number; // 1-5
-  category: 'frontend' | 'backend' | 'mobile' | 'database' | 'devops' | 'design' | 'data' | 'other';
+  category: 'frontend' | 'backend' | 'database' | 'devops' | 'design' | 'data' | 'other';
   icon?: string;
 }
 

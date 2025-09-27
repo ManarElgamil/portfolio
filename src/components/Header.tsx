@@ -84,7 +84,7 @@ const Header = () => {
                 className="object-contain"
               />
             </div>
-            <div className="font-bold text-xl text-primary-600 dark:text-primary-400 font-mono">
+            <div className="font-bold text-base sm:text-lg lg:text-xl text-primary-600 dark:text-primary-400 font-mono">
               {personalInfo.name}
             </div>
           </div>
@@ -95,7 +95,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-600 dark:text-terminal-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium font-mono"
+                className="text-xs sm:text-sm lg:text-base text-gray-600 dark:text-terminal-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium font-mono"
               >
                 {item.name}
               </button>
@@ -140,7 +140,7 @@ const Header = () => {
               href={personalInfo.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary text-xs sm:text-sm lg:text-base"
             >
               Resume
             </a>

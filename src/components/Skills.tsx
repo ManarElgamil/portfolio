@@ -30,11 +30,11 @@ const Skills = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
             Skills & Technologies
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             Here are the technologies and tools I use to bring ideas to life
           </p>
         </div>
@@ -45,7 +45,7 @@ const Skills = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 font-mono ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 font-mono text-xs sm:text-sm lg:text-base ${
                 activeCategory === category.id
                   ? 'bg-primary-600 text-white shadow-lg'
                   : 'bg-white dark:bg-terminal-700 text-gray-600 dark:text-terminal-300 hover:bg-primary-50 dark:hover:bg-primary-800 hover:text-primary-600 dark:hover:text-primary-400'
@@ -67,14 +67,14 @@ const Skills = () => {
               {/* Skill Icon and Name */}
               <div className="flex items-center mb-4">
                 <span className="text-2xl mr-3">{skill.icon}</span>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-terminal-100 font-mono">{skill.name}</h3>
+                <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 dark:text-terminal-100 font-mono">{skill.name}</h3>
               </div>
 
               {/* Skill Level */}
               <div className="mb-3">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-base text-gray-600 dark:text-terminal-300 font-mono">{getSkillLevel(skill.level)}</span>
-                  <span className="text-sm font-medium text-primary-600">{skill.level}/5</span>
+                  <span className="text-xs sm:text-sm lg:text-base text-gray-600 dark:text-terminal-300 font-mono">{getSkillLevel(skill.level)}</span>
+                  <span className="text-xs sm:text-xs lg:text-sm font-medium text-primary-600">{skill.level}/5</span>
                 </div>
                 
                 {/* Progress Bar */}

@@ -8,11 +8,11 @@ const Experience = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
             Work Experience
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             My professional journey and the impact I&apos;ve made along the way
           </p>
         </div>
@@ -33,35 +33,35 @@ const Experience = () => {
                   {/* Header */}
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-terminal-100 mb-1 font-mono">
+                      <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-terminal-100 mb-1 font-mono">
                         {exp.position}
                       </h3>
-                      <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold font-mono">
+                      <p className="text-sm sm:text-base lg:text-lg text-primary-600 dark:text-primary-400 font-semibold font-mono">
                         {exp.company}
                       </p>
                     </div>
                     <div className="mt-2 sm:mt-0">
-                      <span className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium font-mono">
+                      <span className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 rounded-full text-xs sm:text-xs lg:text-sm font-medium font-mono">
                         {exp.startDate} - {exp.endDate || 'Present'}
                       </span>
                     </div>
                   </div>
 
                   {/* Description */}
-                       <p className="text-base text-gray-600 dark:text-terminal-300 mb-6 leading-relaxed font-mono">
+                       <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-terminal-300 mb-6 leading-relaxed font-mono">
                          {exp.description}
                        </p>
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-terminal-100 mb-3 font-mono">
+                    <h4 className="text-xs sm:text-xs lg:text-sm font-semibold text-gray-900 dark:text-terminal-100 mb-3 font-mono">
                       Technologies Used:
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-700 dark:text-terminal-300 rounded-full text-sm font-mono"
+                          className="px-3 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-700 dark:text-terminal-300 rounded-full text-xs sm:text-xs lg:text-sm font-mono"
                         >
                           {tech}
                         </span>

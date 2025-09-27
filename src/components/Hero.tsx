@@ -88,15 +88,15 @@ const Hero = () => {
           </div>
 
           {/* Name and Title */}
-          <h1 className="text-4xl sm:text-6xl font-bold text-primary-600 dark:text-primary-400 mb-4 font-mono">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-4 font-mono">
             {personalInfo.name}
           </h1>
           
-          <h2 className="text-xl sm:text-2xl text-accent-600 dark:text-accent-400 font-semibold mb-6 font-mono">
+          <h2 className="text-base sm:text-lg lg:text-xl xl:text-2xl text-accent-600 dark:text-accent-400 font-semibold mb-6 font-mono">
             {personalInfo.title}
           </h2>
           
-          <p className="text-base sm:text-lg text-gray-600 dark:text-terminal-300 mb-8 max-w-2xl mx-auto leading-relaxed font-mono">
+          <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-terminal-300 mb-8 max-w-2xl mx-auto leading-relaxed font-mono">
             {personalInfo.subtitle}
           </p>
 
@@ -104,20 +104,20 @@ const Hero = () => {
           <div className="flex flex-col custom:flex-row gap-4 justify-center items-center mb-12">
             <button
               onClick={scrollToContact}
-              className="bg-primary-600 hover:bg-primary-700 text-white font-mono text-lg px-8 py-3 rounded-lg transition-colors duration-200 border border-primary-500"
+              className="bg-primary-600 hover:bg-primary-700 text-white font-mono text-xs sm:text-sm lg:text-base px-8 py-3 rounded-lg transition-colors duration-200 border border-primary-500"
             >
               $ contact
             </button>
             <button
               onClick={scrollToProjects}
-              className="bg-gray-200 hover:bg-gray-300 dark:bg-terminal-700 dark:hover:bg-terminal-600 text-primary-600 dark:text-primary-400 font-mono text-lg px-8 py-3 rounded-lg transition-colors duration-200 border border-gray-300 dark:border-terminal-600"
+              className="bg-gray-200 hover:bg-gray-300 dark:bg-terminal-700 dark:hover:bg-terminal-600 text-primary-600 dark:text-primary-400 font-mono text-xs sm:text-sm lg:text-base px-8 py-3 rounded-lg transition-colors duration-200 border border-gray-300 dark:border-terminal-600"
             >
               $ projects
             </button>
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-6 mb-8">
             <a
               href={personalInfo.social.github}
               target="_blank"
@@ -157,7 +157,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
           <button
             onClick={() => scrollToProjects()}
             className="text-gray-600 dark:text-terminal-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"

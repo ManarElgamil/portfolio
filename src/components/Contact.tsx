@@ -71,11 +71,11 @@ const Contact = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Let&apos;s Work Together
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Ready to bring your ideas to life? Let&apos;s discuss your project and how I can help you achieve your goals.
           </p>
         </div>
@@ -84,10 +84,10 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Get in Touch
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
+              <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-gray-300 mb-8">
                 I&apos;m always excited to work on new projects and collaborate with amazing people. 
                 Feel free to reach out if you&apos;d like to discuss a project, need a consultation, 
                 or just want to say hello!
@@ -103,8 +103,8 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Email</h4>
-                  <a href={`mailto:${personalInfo.email}`} className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+                  <h4 className="text-xs sm:text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-100">Email</h4>
+                  <a href={`mailto:${personalInfo.email}`} className="text-xs sm:text-sm lg:text-base text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
                     {personalInfo.email}
                   </a>
                 </div>
@@ -117,8 +117,8 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Phone</h4>
-                  <a href={`tel:${personalInfo.phone}`} className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+                  <h4 className="text-xs sm:text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-100">Phone</h4>
+                  <a href={`tel:${personalInfo.phone}`} className="text-xs sm:text-sm lg:text-base text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
                     {personalInfo.phone}
                   </a>
                 </div>
@@ -132,27 +132,27 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-300">{personalInfo.location}</p>
+                  <h4 className="text-xs sm:text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-100">Location</h4>
+                  <p className="text-xs sm:text-sm lg:text-base text-gray-600 dark:text-gray-300">{personalInfo.location}</p>
                 </div>
               </div>
             </div>
 
             {/* Services */}
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Services I Offer</h4>
+              <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Services I Offer</h4>
               <div className="space-y-3">
                 {[
                   { icon: '💻', title: 'Web Development', desc: 'Full-stack web applications' },
-                  { icon: '📱', title: 'Mobile Development', desc: 'React Native & Flutter apps' },
+                  // { icon: '📱', title: 'Mobile Development', desc: 'React Native & Flutter apps' },
                   { icon: '🔧', title: 'Technical Consulting', desc: 'Architecture & code reviews' },
                   { icon: '🚀', title: 'Performance Optimization', desc: 'Speed & efficiency improvements' },
                 ].map((service, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <span className="text-lg">{service.icon}</span>
                     <div>
-                      <div className="font-medium text-gray-900 dark:text-gray-100">{service.title}</div>
-                      <div className="text-base text-gray-600 dark:text-gray-300">{service.desc}</div>
+                      <div className="text-xs sm:text-sm lg:text-base font-medium text-gray-900 dark:text-gray-100">{service.title}</div>
+                      <div className="text-xs sm:text-xs lg:text-sm text-gray-600 dark:text-gray-300">{service.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -162,13 +162,13 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Send me a message
             </h3>
 
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800">
+                <p className="text-xs sm:text-sm lg:text-base text-green-800">
                   ✅ Thank you! Your message has been sent successfully. I&apos;ll get back to you soon.
                 </p>
               </div>
@@ -176,7 +176,7 @@ const Contact = () => {
 
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-800">
+                <p className="text-xs sm:text-sm lg:text-base text-red-800">
                   ❌ Something went wrong. Please try again or contact me directly via email.
                 </p>
               </div>
@@ -185,7 +185,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-xs lg:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -195,12 +195,12 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-xs sm:text-sm lg:text-base text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-xs sm:text-xs lg:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -210,14 +210,14 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-xs sm:text-sm lg:text-base text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="serviceType" className="block text-xs sm:text-xs lg:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Service Type
                 </label>
                 <select
@@ -225,7 +225,7 @@ const Contact = () => {
                   name="serviceType"
                   value={formData.serviceType || ''}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-800 text-xs sm:text-sm lg:text-base text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                 >
                   <option value="" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">Select a service (optional)</option>
                   <option value="consultation" className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white">Technical Consultation</option>
@@ -236,7 +236,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-xs sm:text-xs lg:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Subject *
                 </label>
                 <input
@@ -246,13 +246,13 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-800 text-xs sm:text-sm lg:text-base text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                   placeholder="What's this about?"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-xs sm:text-xs lg:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -262,7 +262,7 @@ const Contact = () => {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-xs sm:text-sm lg:text-base text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none"
                   placeholder="Tell me about your project or how I can help you..."
                 />
               </div>
@@ -270,7 +270,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font-medium transition-all duration-200 ${
+                className={`w-full py-4 px-6 rounded-lg font-medium transition-all duration-200 text-xs sm:text-sm lg:text-base ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-primary-600 hover:bg-primary-700 transform hover:scale-105'

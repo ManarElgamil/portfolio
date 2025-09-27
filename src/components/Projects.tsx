@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { projects } from '@/data/portfolio'
 import { Project } from '@/types'
 
@@ -11,8 +12,8 @@ const Projects = () => {
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'web', name: 'Web' },
-    { id: 'mobile', name: 'Mobile' },
-    { id: 'desktop', name: 'Desktop' },
+    { id: 'backend', name: 'Backend' },
+    // { id: 'desktop', name: 'Desktop' },
     { id: 'ai', name: 'AI/ML' },
   ]
 
@@ -27,11 +28,11 @@ const Projects = () => {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-primary-400 mb-4 font-mono">
             Featured Projects
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
-          <p className="text-base text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
+          <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-terminal-300 max-w-2xl mx-auto font-mono">
             A showcase of my recent work and contributions to various projects
           </p>
         </div>
@@ -39,15 +40,36 @@ const Projects = () => {
         {/* Featured Projects */}
         {featuredProjects.length > 0 && (
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-accent-400 mb-8 text-center font-mono">
+            {/* <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-accent-400 mb-8 text-center font-mono">
               🌟 Featured Work
-            </h3>
+            </h3> */}
             <div className="grid md:grid-cols-2 gap-8">
               {featuredProjects.map((project) => (
                 <div
                   key={project.id}
                   className="bg-gradient-to-br from-primary-50 to-white dark:from-primary-900/20 dark:to-terminal-700 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-primary-100 dark:border-primary-800"
                 >
+                  {/* Featured Project Image */}
+                  {project.id === 'secure-application' ? (
+                    // Keep placeholder for secure application
+                    <div className="h-32 mb-6 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center">
+                      <div className="text-white text-2xl font-bold">
+                        {project.title.split(' ').map(w => w[0]).join('')}
+                      </div>
+                    </div>
+                  ) : (
+                    // Use actual image for other projects
+                    <div className="h-32 mb-6 relative overflow-hidden rounded-lg">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  )}
+
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-primary-600 text-white text-sm rounded-full">
                       Featured
@@ -57,11 +79,11 @@ const Projects = () => {
                     </span>
                   </div>
                   
-                  <h4 className="text-xl font-bold text-gray-900 dark:text-terminal-100 mb-3 font-mono">
+                  <h4 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-terminal-100 mb-3 font-mono">
                     {project.title}
                   </h4>
                   
-                       <p className="text-base text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
+                       <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-600 dark:text-terminal-300 mb-4 line-clamp-3 font-mono">
                          {project.description}
                        </p>
                   
@@ -69,13 +91,13 @@ const Projects = () => {
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-white dark:bg-terminal-600 text-gray-700 dark:text-terminal-300 text-sm rounded-full border border-gray-200 dark:border-terminal-500 font-mono"
+                        className="px-3 py-1 bg-white dark:bg-terminal-600 text-gray-700 dark:text-terminal-300 text-xs sm:text-xs lg:text-sm rounded-full border border-gray-200 dark:border-terminal-500 font-mono"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 4 && (
-                      <span className="px-3 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-600 dark:text-terminal-300 text-sm rounded-full font-mono">
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-terminal-600 text-gray-600 dark:text-terminal-300 text-xs sm:text-xs lg:text-sm rounded-full font-mono">
                         +{project.technologies.length - 4} more
                       </span>
                     )}
@@ -140,12 +162,26 @@ const Projects = () => {
               className="bg-white dark:bg-terminal-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fade-in border border-gray-200 dark:border-terminal-600"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                <div className="text-white text-4xl font-bold">
-                  {project.title.split(' ').map(w => w[0]).join('')}
+              {/* Project Image */}
+              {project.id === 'secure-application' ? (
+                // Keep placeholder for secure application
+                <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+                  <div className="text-white text-4xl font-bold">
+                    {project.title.split(' ').map(w => w[0]).join('')}
+                  </div>
                 </div>
-              </div>
+              ) : (
+                // Use actual image for other projects
+                <div className="h-48 relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              )}
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
